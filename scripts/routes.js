@@ -2,6 +2,11 @@ angular.module('routes', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider
+		.when('/', {
+			controller: 'AppController',
+			controllerAs: 'AppCtrl',
+			templateUrl: 'views/app.html'
+		})
 		.when('/login', {
 			controller: 'LoginCtrl',
 			controllerAs: 'LoginCtrl',
