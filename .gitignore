@@ -46,3 +46,6 @@ node_modules
 
 # Unit test reports
 reports
+
+# bundle.js build file
+bundle.js
