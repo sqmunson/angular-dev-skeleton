@@ -1,16 +1,42 @@
 angular.module('controllers', ['services'])
 
-	.controller('AppController', ['GetSomethingService',
-	function					 ( GetSomethingService ) {
+    .controller('AppController', ['GetSomethingService',
+    function                     ( GetSomethingService ) {
 
-		console.log('AppCtrl instantiated');
+        console.log('AppCtrl instantiated');
 
-		GetSomethingService.get('e-efe737b7e7d5d1')
-			.then(function(data) {
-				console.log(data);
-			});
-	}])
+        this.getAll = function() {
+            GetSomethingService.getAll()
+                .then(function(data) {
+                    console.log(data);
+                });
+        };
 
-	.controller('FirstController', [function() {}])
+        this.post = function() {
+            var data = {
+                prop1: 'prop1',
+                prop2: 'prop2'
+            };
 
-	.controller('SecondController', [function() {}]);
+            GetSomethingService.post(data)
+                .then(function(data) {
+                    console.log(data);
+                });
+        };
+
+        this.put = function() {
+            var data = {
+                prop1: 'prop2',
+                prop2: 'prop3'
+            };
+
+            GetSomethingService.put(data)
+                .then(function(data) {
+                    console.log(data);
+                });
+        };
+    }])
+
+    .controller('FirstController', [function() {}])
+
+    .controller('SecondController', [function() {}]);

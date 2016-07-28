@@ -1,6 +1,6 @@
 angular.module('app', [
-	'routes',
-	'controllers',
-	'directives',
-	'services'
+    'routes',
+    'controllers',
+    'directives',
+    'services'
 ]);

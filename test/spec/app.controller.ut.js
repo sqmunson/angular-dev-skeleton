@@ -1,22 +1,22 @@
 describe('AppController', function() {
-	var AppCtrl,
-		$rootScope,
-		$scope,
-		$controller;
+    var AppCtrl,
+        $rootScope,
+        $scope,
+        $controller;
 
-	beforeEach(function() {
-		module('app');
+    beforeEach(function() {
+        module('app');
 
-		inject(function($injector) {
-			$controller = $injector.get('$controller');
-			$rootScope = $injector.get('$rootScope');
-			$scope = $rootScope.$new();
+        inject(function($injector) {
+            $controller = $injector.get('$controller');
+            $rootScope = $injector.get('$rootScope');
+            $scope = $rootScope.$new();
 
-			AppCtrl = $controller('AppController', { $scope: $scope });
-		});
-	})
+            AppCtrl = $controller('AppController', { $scope: $scope });
+        });
+    })
 
-	it('should', function() {
+    it('should', function() {
 
-	});
+    });
 });

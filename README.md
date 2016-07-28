@@ -1,6 +1,10 @@
 # Simple Angular Dev Skeleton
 
-A simple environment that included testing and local server
+A simple environment that includes testing and local server
+
+```
+npm install
+```
 
 ## Local server
 

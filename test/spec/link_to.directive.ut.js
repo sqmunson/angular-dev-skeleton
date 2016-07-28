@@ -1,27 +1,27 @@
 describe('linkTo directive', function() {
-	var $link,
-		$compile,
-		$rootScope,
-		$scope;
+    var $link,
+        $compile,
+        $rootScope,
+        $scope;
 
-	var $;
+    var $;
 
-	beforeEach(function() {
-		module('directives');
+    beforeEach(function() {
+        module('directives');
 
-		$ = angular.element;
+        $ = angular.element;
 
-		inject(function($injector) {
-			$rootScope = $injector.get('$rootScope');
-			$compile = $injector.get('$compile');
+        inject(function($injector) {
+            $rootScope = $injector.get('$rootScope');
+            $compile = $injector.get('$compile');
 
-			$scope = $rootScope.$new();
+            $scope = $rootScope.$new();
 
-			$link = $compile('<a link-to="/test">Test Page</a>')($scope);
-		});
-	});
+            $link = $compile('<a link-to="/test">Test Page</a>')($scope);
+        });
+    });
 
-	it('should add a hash to the url', function() {
-		expect($($link).attr('href')).toBe('/#/test');
-	});
+    it('should add a hash to the url', function() {
+        expect($($link).attr('href')).toBe('/#/test');
+    });
 });
