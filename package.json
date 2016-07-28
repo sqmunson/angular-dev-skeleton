@@ -1,7 +1,7 @@
 {
-  "name": "bodylabs-angular",
+  "name": "angular-dev-skeleton",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Angular Dev Skeleton",
   "main": "index.js",
   "scripts": {
     "test": "grunt test",

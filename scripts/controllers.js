@@ -1,13 +1,16 @@
-angular.module('controllers', [])
+angular.module('controllers', ['services'])
 
-.controller('LoginCtrl', [function() {
+	.controller('AppController', ['GetSomethingService',
+	function					 ( GetSomethingService ) {
 
-}])
+		console.log('AppCtrl instantiated');
 
-.controller('ElseCtrl', [function() {
+		GetSomethingService.get('e-efe737b7e7d5d1')
+			.then(function(data) {
+				console.log(data);
+			});
+	}])
 
-}])
+	.controller('FirstController', [function() {}])
 
-.controller('SomethingCtrl', [function() {
-
-}]);
+	.controller('SecondController', [function() {}]);
